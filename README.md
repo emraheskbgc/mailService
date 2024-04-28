@@ -96,4 +96,39 @@ sendEmail(req.query)
 app.listen(port,()=>{
 console.log(nodemailer is listening at http://localhost:${port});
 })
+
+
+
+
+# Client Code Example
+
+
+
+
+```javascript
+const apiUrl = process.env.NEXT_PUBLIC_MAIL_API_URL;
+  const sendmail = (e) => {
+    e.preventDefault()
+    axios.get(apiUrl,{
+      params:{
+        email,
+        subject,
+        message,
+        phoneNumber,
+        checkbox
+      }
+    })
+    .then(()=>{
+      console.log("success");
+    })
+    .catch(()=>{
+      console.log("faild sent mail");
+    })
+    setCheckBox(false)
+  setEmail("")
+  setMessage("")
+  setPhoneNumber("")
+  setSubject("")
+  }
 ```
+
