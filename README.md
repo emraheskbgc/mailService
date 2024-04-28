@@ -61,8 +61,6 @@ console.log(nodemailer is listening at http://localhost:${port});
 
 
 
-
-```javascript
 const apiUrl = process.env.NEXT_PUBLIC_MAIL_API_URL;
   const sendmail = (e) => {
     e.preventDefault()
